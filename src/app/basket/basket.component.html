@@ -1,0 +1,30 @@
+<!-- <div style="width: 225px;float: right;">
+    Sepetteki Ürün Sayısı : {{basketCount}}
+    <ul class="list-group" *ngFor="let basket of basketList">
+      <li class="list-group-item">{{basket.product.name}} -
+        <span class="badge">{{basket.quantity}}</span>
+      </li>
+    </ul>
+  </div> -->
+<div class="title">
+  Sepetteki Ürün Sayısı : {{basketCount}}
+</div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Image</th>
+        <th scope="col">Count</th>
+        <th scope="col">Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr  *ngFor="let basket of basketList">
+        <td class="text">{{basket.product.name}}       
+        </td>
+        <td>  <img src="..." [src]="basket.product.imageUrl" class="img" alt="..."></td>
+        <td class="text">{{basket.quantity}}</td>
+        <td class="text">{{basket.product.price}}</td>
+      </tr>
+    </tbody>
+  </table>
